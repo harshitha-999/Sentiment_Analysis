@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+ 
+    <title>Analyzer-Sentiment analysis</title>
+    <style>
+      body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #e4e7e7, #7e8994);
+}
+.container{
+  max-width: 700px;
+  width: 75%;
+  background-color: rgb(218, 219, 214);
+  border-radius: 70px;
+}
+ </style>
+</head>
+  <body>
+   <div  class="container">
+    <div class="container text-center">
+      <br>
+      <h1>Analyzer</h1><br><br>
+    <form action="/analysis" method="POST">
+          <div>
+            <textarea  rows="8" cols="60"placeholder="Write your comment here!" name="review" class="pb-cmnt-textarea"></textarea>
+            </textarea>
+          </div>
+    <br>
+      <button class='btn btn-success'>Status</button>
+    </form>
+         <br>
+        {% if prediction %}
+        <h2 class="text-dark">{{prediction}}</h2>            
+        {% endif %}    
+    </div>
+  </div>
+</div>
+  </body>
+</html>
